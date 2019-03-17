@@ -1,0 +1,53 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto 30px;
+}
+.form div {
+  margin: 3px 0;
+}
+
+.form input {
+  font-size: 14px;
+  height: 31px;
+  margin-left: 4px;
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 243px;
+  color: #838383;
+}
+select {
+  font-size: 14px;
+  height: 33px;
+  margin-left: 4px;
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 0 8px;
+  width: 243px;
+  color: #838383;
+}
+textarea{
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 14px;
+  margin-left: 4px;
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 4px 10px;
+  width: 243px;
+  color: #838383;
+}
+button {
+  background: #cb9c9c;
+  border: 1px solid #ccc;
+  padding: 11px;
+  color: #FFF;
+  font-weight: bold;
+  text-transform: uppercase;
+}

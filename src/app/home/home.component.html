@@ -1,0 +1,76 @@
+<div class="navigation">
+  <h1> Welcome to our Store </h1>
+<div class="form">
+  <div>
+    <input placeholder="name" #name type="text" id="name" name="user_name">
+  </div>
+  <div>
+    <input placeholder="price" #price type="text" id="mail" name="user_mail">
+  </div>
+  <div>
+      <select name="category" #category>
+          <option disabled> category </option>
+          <option> shoes </option>
+      </select>
+  </div>
+  <div>
+    <select name="rating" #rating>
+      <option disabled> Ratings </option>
+      <option value="14"> 1 Star</option>
+      <option value="24"> 2 Stars</option>
+      <option value="35"> 3 Stars</option>
+      <option value="45"> 4 Stars</option>
+      <option value="98"> 5 Stars</option>
+
+    </select>
+  </div>
+
+  <div>
+    <textarea #message placeholder="Message" id="msg" name="user_message"></textarea>
+  </div>
+
+<button (click)="sendMsg(name.value, price.value, category.value, rating.value, message.value )"> Send </button>
+</div>
+
+
+</div>
+<div class="product_grid">
+  <ul class="product_list list">
+
+    <li class="product_item" *ngFor="let product of products | async">
+      <div class="product_sale">
+        <p>On Sale</p>
+      </div>
+      <div class="product_image">
+        <a href="#"><img src="https://cdn-s3.si.com/s3fs-public/2018/08/27/kobe-ad-nxt-gallery.jpg" alt=""></a>
+        <div class="product_buttons">
+          <button class="product_heart"><i class="fa fa-heart"></i></button>
+          <button class="product_compare"><i class="fa fa-random"></i></button>
+          <button class="add_to_cart"><i class="fa fa-shopping-cart"></i></button>
+          <div class="quick_view">
+            <a href="#">
+              <h6>Quick View</h6>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="product_values">
+        <div class="product_title">
+          <h5> {{product.name}} </h5>
+        </div>
+        <div class="product_price">
+          <a href="#"> <span class="price_old">$200.00</span> <span class="price_new"> $ {{product.price}}</span></a>
+          <span class="product_rating" [ngStyle]="{'background-position-y.%':product.ratings}"></span>
+        </div>
+        <div class="product_desc">
+          <p class="truncate">{{product.desc}}</p>
+        </div>
+        <div class="product_buttons">
+          <button class="product_heart"><i class="fa fa-heart"></i></button>
+          <button class="product_compare"><i class="fa fa-random"></i></button>
+          <button class="add_to_cart"><i class="fa fa-shopping-cart"></i></button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
